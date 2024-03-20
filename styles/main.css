@@ -1,0 +1,11 @@
+/* Set background color to a dark grey */
+body {
+    background-color: #333;
+    color: white; /* Set text color to white */
+    font-family: sans-serif; /* Use a clean, sans-serif font */
+}
+
+/* Increase line spacing slightly for better readability */
+p, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.5;
+}
