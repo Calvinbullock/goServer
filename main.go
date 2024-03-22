@@ -24,11 +24,20 @@ func subStringStriper(text string, target string) string {
 
 // test function for subStringStriper
 func test_SubStringStriper() {
-    // TODO testing
+    //testing
     ans := "pop"
     text := "helppop"
     retu := subStringStriper(text, ans)
+    // "helppop" should be "pop"
     if ans != retu {
+        log.Fatal("test 1 failed", ans)
+    }
+
+    ans1 := "pop"
+    text1 := "help-pop-pop"
+    retu1 := subStringStriper(text1, ans1)
+    // "help-pop-pop" should be "pop-pop"
+    if ans1 != retu1 {
         log.Fatal("test 1 failed", ans)
     }
 
@@ -49,6 +58,7 @@ func Handler(respon http.ResponseWriter, reqest *http.Request) {
     // Remove trailing "/" 
     title = strings.TrimSuffix(title, "/")
     
+    fmt.Println("ti", title)
 
     if strings.Contains(title, "scripts") {
         // is scripts in the path
