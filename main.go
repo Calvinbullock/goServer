@@ -52,22 +52,20 @@ func Handler(respon http.ResponseWriter, reqest *http.Request) {
 
     if strings.Contains(title, "scripts") {
         // is scripts in the path
-        title := subStringStriper(title, "scripts")
-        filename := "./" + title
-        fmt.Println("js: ", filename)
+        title = subStringStriper(title, "scripts")
+        filename = "./" + title
 
     } else if strings.Contains(title, "styles") {
         // is styles in path
-        title := subStringStriper(title,  "styles")
-        filename := "./" + title
-        fmt.Println("css: ", filename)
+        title = subStringStriper(title,  "styles")
+        filename = "./" + title
 
     } else {
-        filename := "./" + title + ".html"
-        fmt.Println("html: ", filename)
+        filename = "./" + title + ".html"
     }
 
     // Serve the file using http.ServeFile
+    fmt.Println("serve:", filename)
     http.ServeFile(respon, reqest , filename)
 }
 
