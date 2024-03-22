@@ -37,25 +37,34 @@ func test_SubStringStriper() {
 
 // Recives request and sends back apropreate response
 func Handler(respon http.ResponseWriter, reqest *http.Request) {
+    // quick validation
+    if reqest.URL.Path == "/" {
+        http.NotFound(respon, reqest)
+        return
+    }
+
     var filename string
 
     title := reqest.URL.Path[len("/"):]
+    // Remove trailing "/" 
+    title = strings.TrimSuffix(title, "/")
+    
 
     if strings.Contains(title, "scripts") {
         // is scripts in the path
-        title := subStringStriper(title, "scripts") // TODO testing
+        title := subStringStriper(title, "scripts")
         filename := "./" + title
-        fmt.Println(filename)
+        fmt.Println("js: ", filename)
 
     } else if strings.Contains(title, "styles") {
         // is styles in path
-        title := subStringStriper(title,  "styles") // TODO testing
+        title := subStringStriper(title,  "styles")
         filename := "./" + title
-        fmt.Println(filename)
+        fmt.Println("css: ", filename)
 
     } else {
-        filename := "./" + title + ".html" // Assuming templates directory
-        fmt.Println(filename)
+        filename := "./" + title + ".html"
+        fmt.Println("html: ", filename)
     }
 
     // Serve the file using http.ServeFile
@@ -65,6 +74,7 @@ func Handler(respon http.ResponseWriter, reqest *http.Request) {
 // runs all testing functions created
 func testRunner() {
     test_SubStringStriper()
+    fmt.Println("testing done")
 }
 
 // NOTE.....
