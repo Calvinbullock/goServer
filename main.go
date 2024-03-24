@@ -58,7 +58,7 @@ func Handler(respon http.ResponseWriter, reqest *http.Request) {
     // Remove trailing "/" 
     title = strings.TrimSuffix(title, "/")
     
-    fmt.Println("ti", title)
+    fmt.Println("page-title", title)
 
     if strings.Contains(title, "scripts") {
         // is scripts in the path
