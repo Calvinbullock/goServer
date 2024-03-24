@@ -11,10 +11,11 @@ Tools: NeoVim.
 language/libraries: Go-lang.
 
 # Useful Websites
-- []()
-- []()
+- [Go-docs for building a basic server](https://go.dev/blog/context/server/server.go)
+- [Go-docs web applications](https://go.dev/doc/articles/wiki/)
 
 # Future Work
-- Item 1
-- Item 2
-- Item 3
+- get more pages
+- page search
+- better css
+- a purpose for the server

@@ -33,7 +33,7 @@ func test_SubStringStriper() {
         log.Fatal("test 1 failed", ans)
     }
 
-    ans1 := "pop"
+    ans1 := "pop-pop"
     text1 := "help-pop-pop"
     retu1 := subStringStriper(text1, ans1)
     // "help-pop-pop" should be "pop-pop"
