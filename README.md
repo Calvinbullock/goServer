@@ -2,7 +2,7 @@
 
 A simple server to learn about building servers in go-lang. My hope here is to gain a better understanding about what happens under the hood of a server.
 
-[Software Demo Video - DeadLink]()
+[Software Demo Video](https://youtu.be/lKjRtL2nTS0)
 
 # Development Environment
 
