@@ -19,3 +19,4 @@ language/libraries: Go-lang.
 - page search
 - better css
 - a purpose for the server
+- learn more about actually building up a sever with out prebuilt functions
